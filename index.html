@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamTask - Project Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TeamTask</div>
+        <ul class="nav-links">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#tasks">Tasks</a></li>
+            <li><a href="#team">Team</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="icon-btn">🌙</button>
+            <button id="auth-btn" class="btn-outline">Login</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Auth Modal -->
+        <div id="auth-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title">Login</h2>
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <section id="dashboard" class="container">
+            <div class="hero-section">
+                <h1>Welcome to TeamTask</h1>
+                <p>Manage your team projects efficiently.</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="card stat-card">
+                    <h3>Total Tasks</h3>
+                    <p id="total-tasks">0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Completed</h3>
+                    <p id="completed-tasks">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tasks" class="container">
+            <div class="section-header">
+                <h2>Project Tasks</h2>
+                <button id="add-task-btn" class="btn-primary">+ New Task</button>
+            </div>
+
+            <div class="task-form-container card" id="task-form-wrapper" style="display: none;">
+                <form id="task-form">
+                    <div class="form-row">
+                        <input type="text" id="task-title" placeholder="Task Title" required>
+                        <select id="task-priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <button type="submit" class="btn-success">Add</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="task-list" class="task-list">
+                <!-- Tasks will be injected here -->
+            </div>
+        </section>
+
+        <section id="team" class="container">
+            <h2>Group 9 Members</h2>
+            <div class="team-grid">
+                <div class="card team-card">
+                    <img src="https://via.placeholder.com/80" alt="Member">
+                    <h3>Md. Jonayet Islam</h3>
+                    <p>ID: 0222420005101051</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://via.placeholder.com/80" alt="Member">
+                    <h3>Shifat Imtiaz</h3>
+                    <p>ID: 0222420005101078</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://via.placeholder.com/80" alt="Member">
+                    <h3>Md. Earshad Rafi</h3>
+                    <p>ID: 0222420005101080</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://via.placeholder.com/80" alt="Member">
+                    <h3>Mahamudul Hasan</h3>
+                    <p>ID: 0222510005101211</p>
+                </div>
+                <div class="card team-card">
+                    <img src="https://via.placeholder.com/80" alt="Member">
+                    <h3>Roy Barua</h3>
+                    <p>ID: 0222420005101079</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Group 9 - Internet Programming Project</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
